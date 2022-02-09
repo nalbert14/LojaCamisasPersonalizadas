@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 90px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #BC4C2A;
+    font-size: 40px;
+    font-family: 'Praise', cursive;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #BC4C2A;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+nav a {
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #BC4C2A;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.btn-menu {
+    visibility: hidden;
+}
+
+.btn-login {
+    display: none;
+    height: 25px;
+    width: 50px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-login:hover {
+    background: rgba(0, 0, 0, 0.15);
+    color: #BC4C2A;
+}
+
+.btn-signout {
+    display: none;
+    height: 25px;
+    width: 50px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-signout:hover {
+    background: rgba(0, 0, 0, 0.15);
+    color: #BC4C2A;
+}
+
+.drop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.15)
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    border-radius: 8px;
+    border: solid 1px rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.containerCheckout {
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    border-radius: 8px;
+    border: solid 1px rgba(0, 0, 0, 0.09);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    width: 80%;
+}
+
+.contentCheckOut {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parte-checkout {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    width: 32%;
+    border-radius: 8px;
+}
+
+.valor-checkout {
+    text-align: left;
+    color: #BC4C2A;
+    font-size: 1rem;
+    font-family: 'Lobster', cursive;
+    width: 80%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.iconCloseLoginOrCad {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.iconCloseLoginOrCad:hover {
+    color: rgb(80, 72, 72);
+}
+
+.endereco-entrega {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartao-credito {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: rgb(248, 248, 248);
+    width: 90%;
+    border-radius: 5px;
+}
+
+.msgs {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    left: 0;
+    top: 0;
+    color: #FFF;
+    font-weight: bold;
+    z-index: 10000;
+}
+
+.container-form .iconClose {
+    margin-left: 300px;
+    background: none;
+}
+
+.form-login-or-cad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    background: rgb(249, 249, 248);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.btn-car {
+    color: #BC4C2A;
+}
+
+.btn-car:hover {
+    font-weight: bold;
+    color: #BC4C2A;
+}
+
+.dropCarrinho {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: rgba(243, 243, 243, 1);
+    right: 0;
+    top: 106px;
+    height: 400px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    width: 300px;
+}
+
+.contentCarrinho {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentCarrinho ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop-car-img-estampa {
+    position: absolute;
+    width: 50px;
+    height: auto;
+}
+
+.title-carrinho-drop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(211, 198, 198, 1);
+    padding: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.remove-item-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: rgb(245, 243, 243);
+    cursor: pointer;
+}
+
+.iconClose {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background: rgba(218, 215, 215, 1);
+    height: 45px;
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 300px;
+}
+
+.iconClose:hover {
+    color: rgb(80, 72, 72);
+}
+
+.carrinhoVazio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+}
+
+.camisa-checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 60%;
+}
+
+.img-camisa-checkout {
+    width: 90%;
+    height: auto;
+}
+
+.img-estampa-checkout {
+    width: 85px;
+    height: auto;
+    position: absolute;
+}
+
+.information {
+    display: flex;
+    margin-top: 90px;
+    width: 100%;
+    background: rgba(243, 243, 243, 0.959);
+}
+
+.input-quant-valor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    width: 33%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.info .pagamentos {
+    width: 100%;
+}
+
+.pagamentos img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.info a {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.info a:hover {
+    font-weight: bold;
+    color: #BC4C2A;
+    font-size: 18px;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #BC4C2A;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.info h1 {
+    font-size: 2vw;
+}
+
+.info span {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+.info input {
+    width: 75%;
+    height: 35px;
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #FFF;
+}
+
+footer p {
+    margin: 10px;
+    font-size: 1.5vw;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        align-items: flex-start;
+        padding-left: 10px;
+        border-top: solid 1px rgba(0, 0, 0, 0.09);
+        border-bottom: solid 1px rgba(0, 0, 0, 0.09);
+        visibility: hidden;
+        transition: all 0.6s ease-out;
+        background: #FFF;
+    }
+
+    .logo {
+        font-size: 35px;
+    }
+
+    .btns {
+        width: 50%;
+    }
+
+    .btn-menu {
+        visibility: visible;
+    }
+
+    .btn-menu:hover {
+        color: #BC4C2A;
+    }
+
+    .btn-menu:hover~nav {
+        visibility: visible;
+    }
+
+    nav:hover {
+        visibility: visible;
+    }
+
+    .contentCheckOut {
+        flex-direction: column;
+    }
+
+    .parte-checkout {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3px;
+    }
+
+    .information {
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info p {
+        font-size: 2.5vw;
+
+        width: 60%;
+    }
+
+    .info h1 {
+        font-size: 4vw;
+    }
+
+    .info .pagamentos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagamentos img {
+        width: 70%;
+    }
+}

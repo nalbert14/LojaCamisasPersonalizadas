@@ -1,0 +1,72 @@
+<section class="principal">
+    <img src="../public/img/natal.png">
+</section>
+<section class="content">
+    <div class="div01">
+        <img src="../public/img/brackfriday.png">
+    </div>
+    <div class="div02">
+        <div class="div021">
+            <img src="../public/img/off.png">
+        </div>
+        <div class="div021">
+            <img src="../public/img/paratodos.png">
+        </div>
+    </div>
+</section>
+<section class="cards">
+    <div class="card-list">
+        <h5 class="title-card">Selecione a cor</h5>
+        <div class="list-estampa">
+            {{#each produtos}}
+            {{#with this}}
+            <ul onclick="selectCor(
+                produto = { 
+                idProduto:{{idProduto}}, 
+                cor:'{{cor}}', 
+                urlCor:'{{urlImageCamisa}}', 
+                valor:{{valor}}, 
+                quant: 1, 
+                descricaoCamisa:'{{descricao}}' 
+                }
+            )">
+                {{cor}} <img src="{{urlImageCamisa}}"></ul>
+            {{/with}}
+            {{/each}}
+        </div>
+    </div>
+    <div class="card-pro">
+        <div class="camisa-e-estampa">
+            <div class="content-estampa">Insira a estampa aqui</div>
+            <img src="https://i.ibb.co/nfM4JGr/camisa-branca.png" class="camisa-img">
+        </div>
+        <i><span>R$ 19,99</span></i>
+        <div class="btns-compras">
+            <a onclick="checkOut()"
+                class="add">
+                Adiquirir
+            </a>
+            <a class="add-car" onclick="addCarrinho()">
+                Adicionar ao carrinho
+            </a>
+        </div>
+    </div>
+    <div class="card-list">
+        <h5 class="title-card">Selecione a estampa</h5>
+        <div class="list-estampa">
+            {{#each estampas}}
+            {{#with this}}
+            <ul onclick="selectEstampa(
+                    estampa = { 
+                    idEstampa:{{idDesenho}}, 
+                    urlEstampa:'{{urlDesenho}}',
+                    descricaoEstampa: '{{descricao}}'
+                    }
+                )">
+                <img src="{{urlDesenho}}">
+            </ul>
+            {{/with}}
+            {{/each}}
+        </div>
+    </div>
+</section>
